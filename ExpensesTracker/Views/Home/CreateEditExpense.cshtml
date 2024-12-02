@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Create / Edit";
+}
+@model ExpensesTracker.Models.Expense
+
+<div class="text-center">
+    <h1 class="display-4">Create Edit an Expense</h1>
+</div>
+<form asp-action="CreateEditExpenseForm" asp-controller="Home">
+   <label>Id</label>
+   <input hidden class="form-control" type="number" placeholder="0" asp-for="Id"/>
+   <br />
+   <label>Value $</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" step="0.01" />
+    <br />
+
+   <label>Description</label>
+    <input class="form-control" type="text" placeholder="Add a description" asp-for="Description"/>
+    <br />
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+
+</form>
